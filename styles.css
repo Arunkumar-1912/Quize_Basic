@@ -14,12 +14,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
 
-.question {
+.question, .quiz-option {
     margin-bottom: 20px;
 }
 
@@ -43,13 +43,16 @@ h1 {
     margin: 20px 0;
 }
 
-button {
+.button, button {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
+    text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px 0;
 }
 
 button:disabled {
@@ -57,7 +60,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-button:hover:not(:disabled) {
+.button:hover, button:hover:not(:disabled) {
     background-color: #0056b3;
 }
 
@@ -65,17 +68,12 @@ button:hover:not(:disabled) {
     display: none;
 }
 
-#result {
+#result, #results-list {
     margin-top: 20px;
     padding: 15px;
     background-color: #e9ecef;
     border-radius: 5px;
 }
 
-.correct {
-    color: green;
-}
-
-.wrong {
-    color: red;
-}
+.correct { color: green; }
+.wrong { color: red; }
